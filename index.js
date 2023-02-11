@@ -48,7 +48,21 @@ function pandaBuyNowBtn() {
 pandaBuyNowBtn()
 
 // একদম নিচে একটা LET'S STAY IN TOUCH নামে একটা জিনিস আছে। সেখানে তুমি submit বাটনটা disable করে ফেলবে। তারপর কেউ যদি উপরে input ফিল্ডে যদি একজাক্টলি email শব্দটা লিখে। তাহলে বাটন একটিভ হবে। আর যদি অন্য কিছু লিখে তাহলে বাটনটা একটিভ হবে না। 
+function stayInTouch() {
+    let formBtn = document.getElementById('formBtn')
+    let inputField = document.getElementById('exampleInputEmail1').addEventListener('keyup', function enabling(event) {
+        let valueText = event.target.value;
+        if (valueText === '') {
+            formBtn.setAttribute('disabled');
+        } else {
+            formBtn.removeAttribute('disabled');
+        }
+    });
+}
+stayInTouch();
+
 
 // (অপশনাল) একটা মজার চ্যালেঞ্জ। কোন একটা ইমেজ এর উপরে mouseenter করলে সেই ইমেজটা চেইঞ্জ হয়ে যাবে। একটু গুগলে সার্চ দিয়ে দেখো। জিনিসটা কিভাবে করা যেতে পারে। 
+
 
 // (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
