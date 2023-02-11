@@ -66,4 +66,14 @@ stayInTouch();
 
 
 // (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
-let
+let subscribe = document.getElementById('subscribe').addEventListener('click', function() {
+    let rgbColor = generateRGBColor();
+    this.style.backgroundColor = rgbColor;
+});
+// Default function for work
+function generateRGBColor() {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    return `#${red}${green}${blue}`;
+}
