@@ -13,3 +13,23 @@ function backPack() {
     return backpack.style.backgroundColor = 'tomato';
 };
 backPack();
+
+// card ক্লাস যতগুলা জায়গায় ইউজ করা হয়েছে সবগুলা কার্ড এর বর্ডার রেডিয়াস ৩০px করে দিতে পারো কিনা 
+function card() {
+    let card = document.querySelectorAll(".card");
+    for (const cards of card) {
+        cards.style.borderRadius = '32px';
+    }
+}
+card();
+
+// কোন একটা ফাংশন লিখো। সেটার ভিতরে কনসোল লগ হবে। এবং সেই ফাংশন টা ক্লিক হ্যান্ডলার হিসেবে কোন একটা বাটনে যোগ করো
+function loggings() {
+    const button = document.getElementById('formBtn').addEventListener('click', loging)
+
+    function loging(e) {
+        e.preventDefault();
+        console.log("hello world");
+    }
+}
+loggings()
