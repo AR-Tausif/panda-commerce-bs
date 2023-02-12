@@ -77,6 +77,3 @@ function generateRGBColor() {
     let blue = Math.floor(Math.random() * 255);
     return `#${red}${green}${blue}`;
 }
-
-
-// we can fixing a bug of tis
